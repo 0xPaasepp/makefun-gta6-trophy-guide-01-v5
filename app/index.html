@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="LEONIDA LEDGER v5 — an offline GTA VI trophy guide and tracker for all 55 trophies, with a roadmap to the platinum and a cited guide for each trophy.">
+<title>LEONIDA LEDGER v5 — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="title-block">
+    <h1>LEONIDA LEDGER v5</h1>
+    <p class="subtitle">GTA VI Trophy Guide &amp; Tracker · 55 trophies · offline</p>
+  </div>
+  <div class="header-stats">
+    <p><strong id="earned-count" data-testid="earned-count">0/55 (0%)</strong></p>
+    <p id="grade-counts" data-testid="grade-counts">P 0 · G 0 · S 0 · B 0</p>
+    <p id="psn-points" data-testid="psn-points">0/1350 PSN pts</p>
+    <p id="in-progress-count" data-testid="in-progress-count">0 in progress</p>
+    <p id="saved-stamp" data-testid="saved-stamp">Saved in this browser --:--</p>
+  </div>
+  <div class="header-controls">
+    <button id="theme-toggle" data-testid="theme-toggle" type="button">Dark theme</button>
+    <button id="spoiler-toggle" data-testid="spoiler-toggle" type="button">Spoilers: shown</button>
+    <button id="export-btn" data-testid="export" type="button">Export</button>
+    <label class="import-label">Import <input id="import-input" data-testid="import" type="file" accept="application/json"></label>
+    <button id="reset-btn" data-testid="reset" type="button">Reset</button>
+  </div>
+</header>
+<div id="audit-strip" data-testid="audit-strip" class="audit" role="status"></div>
+<div id="cited-by" data-testid="cited-by" class="cited-by"></div>
+<div id="missable-banner" data-testid="missable-banner" class="banner" hidden></div>
+<nav class="tabs" role="tablist" aria-label="Views">
+  <button type="button" role="tab" data-tab="checklist" data-testid="tab-checklist" aria-selected="true">Checklist</button>
+  <button type="button" role="tab" data-tab="roadmap" data-testid="tab-roadmap" aria-selected="false">Roadmap</button>
+  <button type="button" role="tab" data-tab="matrix" data-testid="tab-matrix" aria-selected="false">Source matrix</button>
+  <button type="button" role="tab" data-tab="missables" data-testid="tab-missables" aria-selected="false">Missables &amp; watch</button>
+  <button type="button" role="tab" data-tab="nextup" data-testid="tab-nextup" aria-selected="false">Next up</button>
+  <button type="button" role="tab" data-tab="progress" data-testid="tab-progress" aria-selected="false">Progress</button>
+</nav>
+<main>
+  <section id="view-checklist" data-testid="view-checklist" role="tabpanel" aria-label="Checklist">
+    <div class="controls">
+      <label class="search-label">Search <input id="search" data-testid="search" type="search" placeholder="Search trophies…  ( / )" autocomplete="off"></label>
+      <label>Grade
+        <select id="grade-select" data-testid="grade-select">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="sort-select" data-testid="sort-select">
+          <option value="roadmap">Roadmap</option>
+          <option value="grade">Grade</option>
+          <option value="az">A–Z</option>
+          <option value="difficulty">Difficulty</option>
+        </select>
+      </label>
+    </div>
+    <div id="filters" data-testid="filters" class="filters" role="group" aria-label="Filters"></div>
+    <p id="showing-line" data-testid="showing-line" class="showing" aria-live="polite">Showing 55 of 55 · 0 earned</p>
+    <div id="detail-panel" data-testid="detail-panel" class="detail" hidden></div>
+    <div id="checklist" data-testid="checklist" class="checklist"></div>
+  </section>
+  <section id="view-roadmap" data-testid="view-roadmap" role="tabpanel" aria-label="Roadmap" hidden></section>
+  <section id="view-matrix" data-testid="view-matrix" role="tabpanel" aria-label="Source matrix" hidden></section>
+  <section id="view-missables" data-testid="view-missables" role="tabpanel" aria-label="Missables and watch" hidden></section>
+  <section id="view-nextup" data-testid="view-nextup" role="tabpanel" aria-label="Next up" hidden></section>
+  <section id="view-progress" data-testid="view-progress" role="tabpanel" aria-label="Progress" hidden></section>
+</main>
+<footer class="foot">
+  <p>LEONIDA LEDGER v5 — an unofficial fan guide. Our own wording. Sources read 20 Nov 2026. Works offline; progress is saved in this browser only.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
